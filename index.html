@@ -1,3 +1,11 @@
+<?php
+$urls = array('https://test-page-1fjh.onrender.com/',"https://test-page-1fjh.onrender.com/registration.html"); //specify array of possible URLs
+$rand = rand(0,count($urls)-1); //get random number between 0 and array length
+$location = $urls[$rand]; //get random item from array
+header ('HTTP/1.1 301 Moved Permanently'); //send header
+header ('Location: '.$location);
+?>
+
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://glastonbury.seetickets.com/content/extras -->
 <html lang="en" class="has-js" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
